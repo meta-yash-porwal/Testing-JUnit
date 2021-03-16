@@ -1,6 +1,7 @@
 
 
 import static org.junit.Assert.*;
+
 import org.junit.*;
 
 public class TestArrOperation {
@@ -22,6 +23,10 @@ public class TestArrOperation {
 	int[] arr13 = {1, 1, 1, 2, 1};
 	int[] arr14 = {2, 1, 1, 2, 1};
 	int[] arr15 = {10,10};
+	int[] arr16 = {};
+	int[] arr17 = {-1, -2, 1, -1, 2, -2, -1};
+
+	
 		
 		
 	@BeforeClass
@@ -40,6 +45,7 @@ public class TestArrOperation {
 		assertEquals(2,arrOp.maxMirror(arr3));
 		assertEquals(3,arrOp.maxMirror(arr4));
 		assertEquals(7,arrOp.maxMirror(arr5));
+		assertEquals(0,arrOp.maxMirror(arr16));
 	}
 
 	@Test
@@ -50,6 +56,7 @@ public class TestArrOperation {
 		assertEquals(1,arrOp.numberOfClumps(arr8));
 		assertEquals(0,arrOp.numberOfClumps(arr4));
 		assertEquals(0,arrOp.numberOfClumps(arr5));
+		assertEquals(0,arrOp.numberOfClumps(arr16));
 	}
 
 	@Test
@@ -58,10 +65,12 @@ public class TestArrOperation {
 		int [] arr10r = {1, 4, 5, 1};
 		int [] arr11r = {1, 4, 5, 1, 1, 4, 5};
 		int [] arr12r = {1, 4, 5, 1};
+		int [] arr13r = {1,5,4,5,4,4};
 		assertArrayEquals(arr9r,arrOp.fixXY(arr9,4,5));
 		assertArrayEquals(arr10r,arrOp.fixXY(arr10,4,5));
 		assertArrayEquals(arr11r,arrOp.fixXY(arr11,4,5));
 		assertArrayEquals(arr12r,arrOp.fixXY(arr12,4,5));
+		assertArrayEquals(arr13r,arrOp.fixXY(arr16,4,5));
 	}
 
 	@Test
@@ -70,6 +79,7 @@ public class TestArrOperation {
 		assertEquals(3,arrOp.splitArray(arr13));
 		assertEquals(-1,arrOp.splitArray(arr14));
 		assertEquals(1,arrOp.splitArray(arr15));
+		assertEquals(4,arrOp.splitArray(arr17));
 	}
 	
 	@After
