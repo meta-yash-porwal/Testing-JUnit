@@ -21,7 +21,8 @@ public class ArrOperation {
 	public int maxMirror(int[] arr) {
 	    int max = 0;
 	    // for assertion error 
-	    assert arr.length > 0 : "Array is empty" ;
+	    if(arr.length == 0) 
+			throw new AssertionError("Array is empty");
 		
 	    for(int i = 0; i < arr.length; i++) {
 	        int count = 0;
@@ -55,7 +56,8 @@ public class ArrOperation {
 	public int numberOfClumps(int[] arr){
 		int count = 0, numberOfClumps = 0;
 		// for assertion error 
-		assert arr.length > 0 : "Array is empty" ;
+		if(arr.length == 0) 
+			throw new AssertionError("Array is empty");
 
 		for(int i = 1; i < arr.length; i++){
 			if(arr[i] == arr[i-1]){
@@ -92,11 +94,13 @@ public class ArrOperation {
 		
 		
 		// for assertion error 
-		assert arr.length > 0 : "Array is empty";
+		if(arr.length == 0) 
+			throw new AssertionError("Array is empty");
 		
 
 		// for assertion error 
-		assert arr[arr.length - 1] != x : "X can't be at last index";
+		if(arr[arr.length - 1] == x {
+			throw new AssertionError("X can't be at last index");
 		
 		for (int i = 0; i < arr.length; i++) {
 			if (arr[i] == x) {
@@ -114,11 +118,13 @@ public class ArrOperation {
 	
 
 		// for assertion error 
-		assert countX == countY : "X and Y are unequal";
+		if(countX != countY) {
+			throw new AssertionError("X and Y are unequal");
 		
 
 		// for assertion error 
-		assert isXAfterX == false :  "Two Adjacents X Values are there.";
+		if(isXAfterX == true) {
+			throw new AssertionError("Two Adjacents X Values are there.");
 		
 		for (int i = 0; i < arr.length; i++) {
 			if (arr[i] == x) {
@@ -160,7 +166,8 @@ public class ArrOperation {
 	 */
 	public int splitArray(int arr[]) {
 		// for assertion error 
-		assert arr.length > 0 : "Array is empty";
+		if(arr.length == 0) 
+			throw new AssertionError("Array is empty");
 		int left = 0;
 		for(int i = 0; i<arr.length; i++) {
 			left += arr[i];
